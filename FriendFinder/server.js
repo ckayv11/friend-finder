@@ -10,13 +10,9 @@ var PORT = process.env.PORT || 8080;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// Set up links to API & HTML Routes
-var apiRoutes = require('./FriendFinder/app/routing/apiRoutes.js');
-var htmlRoutes = require('./FriendFinder/app/routing/htmlRoutes.js');
-
-// Server Routing Map
-apiRoutes(app);
-htmlRoutes(app);
+// Set up links to API & HTML Routes (order matters because catch-all)
+require('../routing/apiRoutes.js')(app);
+require('../routing/htmlRoutes.js')(app);
 
 // Starts the server to begin listening
 app.listen(PORT, function() {
