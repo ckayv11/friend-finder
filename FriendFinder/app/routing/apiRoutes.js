@@ -6,13 +6,13 @@ var friendsData = require('../data/friends.js');
 function apiRoutes(app) {
 // Using GET route to display all possible friends
     app.get('/api/friends', function(req, res) {
-      return res.json(friendsData);
+      res.json(friendsData);
     });
 // Using POST route to handle input & calculate match
     app.post('/api/friends', function(req, res) {
       let newFriend = calcMatch(req.body);
       friendsData.push(req.body);
-      return res.json(newFriend);
+      res.json(newFriend);
     });
 };
 
