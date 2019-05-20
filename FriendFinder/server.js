@@ -11,8 +11,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Set up links to API & HTML Routes (order matters because catch-all)
-require('../routing/apiRoutes.js')(app);
-require('../routing/htmlRoutes.js')(app);
+require('./app/routing/apiRoutes.js')(app);
+require('./app/routing/htmlRoutes.js')(app);
 
 // Starts the server to begin listening
 app.listen(PORT, function() {
