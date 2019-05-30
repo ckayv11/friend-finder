@@ -4,7 +4,7 @@
 
 Using Node & Express, this full-stack Friend Finder app will take in results from the users' surveys, then compare their answers with those from other users. The app will then display the name and picture of the user with the best overall match.
 
-**Link to App:**  
+**Link to App:**  https://blooming-spire-57231.herokuapp.com/
 
 ## Instructions ##
 
